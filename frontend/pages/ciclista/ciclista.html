@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciclista</title>
+    <!-- typografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- boostrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../../css/index.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="background-color: rgb(53, 137, 148)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand logo" style="margin: 1rem;" href="#">TOUR de FRANCIA</a>
+        
+        <div
+          class="collapse navbar-collapse colorMenu"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="../equipos/equipo.html">Equipos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../etapas/etapa.html">Etapas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="ciclista.html">Ciclistas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../premios/premio.html">Premios</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <h1 class="m-5" id="title">Ciclistas</h1>
+    <button
+      class="m-3 btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Ciclista Nueva
+    </button>
+
+
+    <section class="content" id="carta"></section>
+
+
+
+    <!---modal nuevo ciclista-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h1 class="modal-title fs-5 modaltitulo" id="exampleModalLabel">Agregar Ciclista</h1>
+          </div>
+          <div class="modal-body">
+              <form action="" method="post" class="formularios" id="formCiclista">
+                  <div class="mb-3">
+                      <label for="" class="form-label">Nombre Ciclista: </label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre ciclista" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="" class="form-label">Nacionalidad : </label>
+                      <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese nacionalidad" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="" class="form-label">Foto : </label>
+                      <input type="text" class="form-control" id="foto" placeholder="Ingrese foto" required>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="input" class="btn btn-primary btnForm">Add</button>
+              </form>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
+
+
+    <!-- modal update ciclista -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h1 class="modal-title fs-5 modaltitulo" id="staticBackdropLabel">EDITAR ciclista</h1>
+          </div>
+          <div class="modal-body">
+              <form action="" method="post" class="formularios" id="formUpdateCiclista">
+                  <div class="mb-3">
+                      <label for="" class="form-label">Nombre Ciclista: </label>
+                      <input type="text" class="form-control" id="nombreUpdate" placeholder="Ingrese nombre ciclista" >
+                  </div>
+                  <div class="mb-3">
+                      <label for="" class="form-label">Nacionalidad : </label>
+                      <input type="text" class="form-control" id="nacionalidadUpdate" placeholder="Ingrese nacionalidad" >
+                  </div>
+                  <div class="mb-3">
+                      <label for="" class="form-label">Foto : </label>
+                      <input type="text" class="form-control" id="fotoUpdate" placeholder="Ingrese foto" >
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary btnForm" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="input" class="btn btn-primary btnForm">Add</button>
+              </form>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
+<!-- ----------------------------- -->
+
+    <script src="ciclista.js" type="module"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
